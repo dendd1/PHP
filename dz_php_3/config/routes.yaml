@@ -1,0 +1,8 @@
+main_page:
+        path: /
+        controller: App\Controller\MainController::show_main_page
+        methods: GET
+send_app:
+        path: /app
+        controller: App\Controller\MainController::sendApp
+        methods: GET
