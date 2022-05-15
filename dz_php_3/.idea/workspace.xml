@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88c5d4d3-b793-4b5c-be4d-856772d3e610" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>C:\OpenServer\domains\film\composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/friendsofphp/php-cs-fixer" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/composer" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/php-cs-fixer/diff" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/tools/php-cs-fixer/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/../film/vendor/composer" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/../film/vendor/symfony/polyfill-mbstring" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="25gKbjFqMyV73Frte8H8JVSnv6n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\film\templates" />
+      <recent name="C:\OpenServer\domains\film\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\film\public" />
+      <recent name="C:\OpenServer\domains\film" />
+      <recent name="C:\OpenServer\domains\film\src\App\Controller" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88c5d4d3-b793-4b5c-be4d-856772d3e610" name="Changes" comment="" />
+      <created>1645943363209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645943363209</updated>
+      <workItem from="1645943366866" duration="5895000" />
+      <workItem from="1645961176615" duration="2994000" />
+      <workItem from="1645969160621" duration="64000" />
+      <workItem from="1645969246831" duration="75000" />
+      <workItem from="1645969339070" duration="396000" />
+      <workItem from="1645969972798" duration="124000" />
+      <workItem from="1645970123452" duration="7106000" />
+      <workItem from="1645979732117" duration="481000" />
+      <workItem from="1646036664040" duration="4422000" />
+      <workItem from="1646041184319" duration="10385000" />
+      <workItem from="1646115096128" duration="4960000" />
+      <workItem from="1646131200052" duration="16817000" />
+      <workItem from="1646203392699" duration="4864000" />
+      <workItem from="1646222536449" duration="9313000" />
+      <workItem from="1646320641650" duration="651000" />
+      <workItem from="1646388396367" duration="9248000" />
+      <workItem from="1646408538904" duration="3363000" />
+      <workItem from="1646468283482" duration="7287000" />
+      <workItem from="1646546969110" duration="8548000" />
+      <workItem from="1646724459956" duration="22000" />
+      <workItem from="1646802204472" duration="367000" />
+      <workItem from="1647237442294" duration="1749000" />
+      <workItem from="1647248654808" duration="1032000" />
+      <workItem from="1651659740422" duration="15442000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
