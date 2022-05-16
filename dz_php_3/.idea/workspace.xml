@@ -75,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dz_php_5" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -123,6 +123,8 @@
       <workItem from="1647237442294" duration="1749000" />
       <workItem from="1647248654808" duration="1032000" />
       <workItem from="1651659740422" duration="15442000" />
+      <workItem from="1652268989261" duration="26000" />
+      <workItem from="1652703210572" duration="1367000" />
     </task>
     <servers />
   </component>

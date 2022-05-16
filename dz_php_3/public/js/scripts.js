@@ -1,4 +1,5 @@
-function clear() {
+//Функция очистки формы
+function clear(){
     document.myForm.first_name.parentNode.children[1].style.display = 'none'
     document.myForm.second_name.parentNode.children[1].style.display = 'none'
     document.myForm.email.parentNode.children[1].style.display = 'none'
@@ -7,11 +8,12 @@ function clear() {
     document.getElementById('dbcheck').style.display = 'none'
 }
 
+//Сабмит формы
 document.getElementById('sumbit_button').addEventListener('click',
     () => {
         clear()
         let Data = new FormData();
-
+        //Валидация формы
         let validate = {
             first_name: document.myForm.first_name.value.length !== 0,
             second_name: document.myForm.second_name.value.length !== 0,
@@ -22,6 +24,7 @@ document.getElementById('sumbit_button').addEventListener('click',
             comm: document.myForm.comm.value.length !== 0
 
         }
+        //Проверка на валидность
         if (Object.values(validate).every(elem => elem)) {
             var CurrentTime = new Date();
             CurrentTime.setMinutes(CurrentTime.getMinutes() + 30);

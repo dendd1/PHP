@@ -11,6 +11,7 @@ use PHPMailer\PHPMailer\Exception;
 
 class DbController
 {
+    //Подключение к бд
     public function connectToDataBase()
     {
         $params = parse_ini_file('../config/parameters.ini', true);
@@ -28,6 +29,7 @@ class DbController
         }
     }
 
+    //Загрузка сообщения от пользователя в бд
     public function addAppToDB(PDO $PDO, $first_name, $second_name, $last_name, $email, $phone, $comment)
     {
         $prep = $PDO->
@@ -45,6 +47,7 @@ class DbController
         ]);
     }
 
+    //Поиск последнего сообщения от пользователя по его майлу
     public function getUserWithActiveReplyByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT * FROM users WHERE email = :email ORDER BY datetime DESC LIMIT 1");
@@ -54,6 +57,7 @@ class DbController
         return $prep->fetch();
     }
 
+    //Счет сообщений по майлу
     public function getUserCountByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT count(*) FROM users WHERE email = :email");
@@ -62,7 +66,7 @@ class DbController
         ]);
         return $prep->fetch()['count(*)'];
     }
-
+    //Получения пользователя по почте
     public function getUserIdByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT id FROM users WHERE email = :email");
@@ -72,6 +76,7 @@ class DbController
         return $prep->fetch()['id'];
     }
 
+    //Удаение пользователя по id
     public function deleteUserById($PDO, $id)
     {
         $prep = $PDO->prepare("DELETE FROM users WHERE id = :id");
@@ -79,7 +84,7 @@ class DbController
             'id' => $id,
         ]);
     }
-
+    //Отправка на почту сообщения
     public function sendToEmail(string $name, string $email, string $phone, string $comment)
     {
         $params = parse_ini_file('../config/email.ini', true);

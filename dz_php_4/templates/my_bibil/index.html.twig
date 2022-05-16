@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Бибил.ру{% endblock %}
+
+{% block body %}
+
+    <main class="container">
+
+
+        <div class="row mb-2">
+            {% for b in books %}
+                <div class="col-md-12">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">{{ b.author }}</strong>
+                            <h3 class="mb-0">{{ b.name }}</h3>
+                            <div class="mb-1 text-muted">{{ b.dateread|date('d.m.Y h:i:s') }}</div>
+                            <div class="mb-1 text-muted">Загрузил пользователь: {{ b.user.username }}</div>
+                            <a href="{{ b.getFile() }}" class="stretched-link">Читать</a>
+                            <div style="display: flex;">
+                                <p><a class="btn " href="/remove/book/{{ b.getId() }}" role="button">Редактировать</a>
+                                </p>
+                                <p><a class="btn" href="/delete/{{ b.getId() }}" role="button">Удалить</a></p>
+                            </div>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <img style="object-fit: cover;" width="230" height="330" src="{{ b.picture }}"></img>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+    </main>
+
+    <footer class="blog-footer text-center">
+        <p>Данила-Едишн</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+
+
+{% endblock %}

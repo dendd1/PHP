@@ -1,7 +1,9 @@
+#Обработка ссылки на главную страницу
 main_page:
         path: /
         controller: App\Controller\MainController::show_main_page
         methods: GET
+#Обработка ссылки на отправку сообщения
 send_app:
         path: /app
         controller: App\Controller\MainController::sendApp

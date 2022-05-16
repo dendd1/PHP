@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use DateTime;
 
+//Контроллер для обработки команд с yaml
 class MainController extends BaseController
 {
     public function __construct()
@@ -19,7 +20,7 @@ class MainController extends BaseController
     {
         return $this->renderTemplate('main_page.php', []);
     }
-
+    //Функция обработки данных с формы
     public function sendApp()
     {
         $fname = htmlspecialchars($_POST["first_name"]);
@@ -29,21 +30,24 @@ class MainController extends BaseController
         $phone = htmlspecialchars($_POST["phone"]);
         $comm = htmlspecialchars($_POST["comm"]);
         $PDO = $this->DbController->connectToDataBase();
+        //Если пользователь уже отправлял сообщение
         if ($this->DbController->getUserCountByEmail($PDO, $email) > 0) {
             $dateFromDB = DateTime::createFromFormat('Y-m-d H:i:s', $this->
             DbController->
             getUserWithActiveReplyByEmail($PDO, $email)['datetime']);
+            //Перевод разницы текущего времени и времени отправки
             $now = new \DateTime('now');
             $interval = $now->diff($dateFromDB);
             $minutes = $interval->days * 24 * 60;
             $minutes += $interval->h * 60;
             $minutes += $interval->i;
+            //Вывод времени
             if ($minutes < 60 and $dateFromDB < $now) {
                 $date_plus_hour = $dateFromDB;
                 $date_plus_hour->modify('+ 1 hour');
                 $time_pause = $date_plus_hour->diff($now);
                 return new JsonResponse(['status' => false, 'h' => $time_pause->h, 'm' => $time_pause->i, 's' => $time_pause->s]);
-            } else {
+            } else {//Отправка данных формы на загрузку в бд и отправку в майлер
                 $this->DbController->deleteUserById($PDO, $this->DbController->getUserIdByEmail($PDO, $email));
                 $this->DbController->addAppToDB($PDO, $fname, $sname, $lname, $email, $phone, $comm);
                 $this->DbController->sendToEmail($fname . ' ' . $sname . ' ' . $lname, $email, $phone, $comm);

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddQuestionController!{% endblock %}
+
+{% block body %}
+    <h1>Параметры книги:</h1>
+
+    {{ form_start(formBook) }}
+    {{ form_row(formBook.name) }}
+    {{ form_row(formBook.author) }}
+    {{ form_row(formBook.picture) }}
+    {{ form_row(formBook.file) }}
+    {{ form_row(formBook.dateRead) }}
+    <br>
+    <div class="col text-center">
+        {{ form_row(formBook.save) }}
+    </div>
+
+
+
+
+    {{ form_end(formBook) }}
+{% endblock %}
