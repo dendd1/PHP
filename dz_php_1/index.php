@@ -1,13 +1,15 @@
 <?php
-
-//Функия расчетов выигрыша, где на вход поступает файл с данными о игре
+//Функция расчета выигрыша
+//Параметры:
+//fileName - файл с исходными данными
+//return void
 function calculate($fileName)
 {
     $input = fopen($fileName, 'r');
     $number_bets = fgets($input);
     $balance = 0;
     $bets = array();
-    //считывание данных с файла
+    //Считывание данных с файла
     for ($i = 0; $i < $number_bets; $i++) {
         list($bets_id_game, $bets_sum, $bets_result) = explode(" ", fgets($input));
         $bets_result = trim($bets_result);
@@ -38,8 +40,11 @@ function calculate($fileName)
     }
     return $balance;
 }
-//Функиця принимаюшая задания и ответы на них
-//В ходе выполнения решения, идет проверка результатов программы с ответами
+//Функция проверяющая правильность решения
+//Параметры:
+//inputData - файл с исходными данными
+//inputAns - файл с ответами
+//return void
 function task_A($inputData, $inputAns)
 {
     echo "Результаты тестов: <br><br>";

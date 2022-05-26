@@ -11,7 +11,8 @@ use PHPMailer\PHPMailer\Exception;
 
 class DbController
 {
-    //Подключение к бд
+    //Функция подключения к бд
+    //return void
     public function connectToDataBase()
     {
         $params = parse_ini_file('../config/parameters.ini', true);
@@ -29,7 +30,16 @@ class DbController
         }
     }
 
-    //Загрузка сообщения от пользователя в бд
+    //Функция загрузки сообщения от пользователя в бд
+    //Параметры:
+    //PDO - объект для работы с бд
+    //first_name - имя отправителя
+    //second_name - фамилия отправителя
+    //last_name - отчество отправителя
+    //email - почта отправителя
+    //phone - телефон отправителя
+    //comment - коммент отправителя
+    //return void
     public function addAppToDB(PDO $PDO, $first_name, $second_name, $last_name, $email, $phone, $comment)
     {
         $prep = $PDO->
@@ -47,7 +57,11 @@ class DbController
         ]);
     }
 
-    //Поиск последнего сообщения от пользователя по его майлу
+    //Функция поиска последнего сообщения от пользователя по его майлу
+    //Параметры:
+    //PDO - объект для работы с бд
+    //email - почта отправителя
+    //return сообщение пользователя
     public function getUserWithActiveReplyByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT * FROM users WHERE email = :email ORDER BY datetime DESC LIMIT 1");
@@ -57,7 +71,11 @@ class DbController
         return $prep->fetch();
     }
 
-    //Счет сообщений по майлу
+    //Функция счета сообщений по майлу
+    //Параметры:
+    //PDO - объект для работы с бд
+    //email - почта отправителя
+    //return количество сообщений
     public function getUserCountByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT count(*) FROM users WHERE email = :email");
@@ -66,7 +84,11 @@ class DbController
         ]);
         return $prep->fetch()['count(*)'];
     }
-    //Получения пользователя по почте
+    //Функция получения пользователя по почте
+    //Параметры:
+    //PDO - объект для работы с бд
+    //email - почта отправителя
+    //return пользователь
     public function getUserIdByEmail(PDO $PDO, $email)
     {
         $prep = $PDO->prepare("SELECT id FROM users WHERE email = :email");
@@ -76,7 +98,11 @@ class DbController
         return $prep->fetch()['id'];
     }
 
-    //Удаение пользователя по id
+    //Функция удаение пользователя по id
+    //Параметры:
+    //PDO - объект для работы с бд
+    //id - id отправителя
+    //return void
     public function deleteUserById($PDO, $id)
     {
         $prep = $PDO->prepare("DELETE FROM users WHERE id = :id");
@@ -84,7 +110,13 @@ class DbController
             'id' => $id,
         ]);
     }
-    //Отправка на почту сообщения
+    //Функция отправки на почту сообщения
+    //Параметры:
+    //name - ФИО отправителя
+    //email - почта отправителя
+    //phone - телефон отправителя
+    //comment - коммент отправителя
+    //return void
     public function sendToEmail(string $name, string $email, string $phone, string $comment)
     {
         $params = parse_ini_file('../config/email.ini', true);

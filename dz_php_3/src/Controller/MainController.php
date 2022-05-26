@@ -15,12 +15,14 @@ class MainController extends BaseController
         $this->DbController = new DbController();
         session_start();
     }
-
+    //Функция показа главной страницы
+    //return данные для рендера
     public function show_main_page(): Response
     {
         return $this->renderTemplate('main_page.php', []);
     }
-    //Функция обработки данных с формы
+    //Функция обработки и отправки данных с формы
+    //return void
     public function sendApp()
     {
         $fname = htmlspecialchars($_POST["first_name"]);

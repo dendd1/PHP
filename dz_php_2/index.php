@@ -26,7 +26,7 @@ echo $output;
 echo '<h2>Задание 2</h2>
             <br>';
 $input = 'http://asozd.duma.gov.ru/main.nsf/(Spravka)?OpenAgent&RN=366426-7&11';//пример входных данных
-echo $input . '--------->';
+echo $input . ' ---------> ';
 preg_match_all("/http:\/\/asozd.duma.gov.ru\/main.nsf\/\(Spravka\)\?OpenAgent&RN=[0-9]{1,10}[-][0-9]{1,10}&[0-9]{1,10}/",
     $input, $value);//поиск значений подходящих под регулярное выражение
 $copy_value=$value[0];//копирование значений
