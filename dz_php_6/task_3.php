@@ -1,10 +1,10 @@
 <?php
 echo '<h2>Задание С</h2><br>';
 for ($k = 1; $k < 7; $k++) {
-    $fileNumber = '0' . $k;
+    $fileNumber =  $k;
     //Формат имен файлов
-    $ansName = "0" . $fileNumber . ".ans";
-    $datName = "0" . $fileNumber . ".dat";
+    $ansName = $fileNumber . ".ans";
+    $datName = $fileNumber . ".dat";
     //Загрузка из файла
     $lines = file("C\\" . $datName, FILE_IGNORE_NEW_LINES);
 
@@ -32,8 +32,10 @@ for ($k = 1; $k < 7; $k++) {
     //Замена переходов строки
     $ans = str_replace("\n", "<br>", $ans);
     $dat = str_replace("\n", "<br>", $dat);
-    echo "$k TEST-----------------------------------------------------------------------------------NEXT<br>";
-    echo "Входные данные:<br> $dat<br><br><br>Ответ:<br> $ans<br><br>Ответ программы:<br> $fileResult<br>";
+
+    echo "Тест $k: <br><br>";
+    echo "Ответ: $ans<br><br>Результат программы: $fileResult<br><br>";
+
 }
 class Banner
 {
